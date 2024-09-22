@@ -1,0 +1,119 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  height: calc(100% - 1rem);
+  max-width: 400px;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  margin: 0 1rem;
+  margin-bottom: 1rem;
+  background-color: var(--color-secondary-light); /* Soft green background */
+  box-shadow: 0 0 3rem var(--color-shadow-light);
+  border: 1px solid var(--color-border);
+}
+
+.chatsHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  padding-bottom: 0;
+  background-color: var(--color-background-light); /* Light neutral background */
+  width: 100%;
+}
+
+.chatsHeader h2 {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--color-text-dark); /* Dark text for contrast */
+}
+
+.chatsHeader button {
+  background-color: var(--color-accent); /* Accent color for button */
+  color: var(--color-background-light); /* White text for button */
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.chatsHeader button:hover {
+  background-color: var(--color-primary-dark); /* Darker shade on hover */
+}
+
+.chatsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: var(--color-background-light);
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.chats {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.chat {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  gap: 1rem;
+  background-color: var(--color-background-light); /* Neutral background */
+  border-radius: 0.5rem;
+  color: var(--color-text-dark); /* Dark text */
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.chat:hover {
+  background-color: rgb(12, 139, 155); /* Primary color on hover */
+  color: var(--color-background-light); /* White text on hover */
+}
+
+.chat.active {
+  background-color: rgb(12, 139, 155); /* Primary color for active chat */
+  color: var(--color-background-light);
+}
+
+.chat.active .avatar {
+  background-color: var(--color-primary-dark); /* Darker primary for avatar */
+}
+
+.chat.active:hover .avatar {
+  background-color: var(--color-primary-dark);
+}
+
+.chat:hover .avatar {
+  background-color: var(--color-primary-dark); /* Darker primary for hover */
+}
+
+.chatName {
+  font-size: 1.1rem;
+  font-weight: 500;
+  display: flex;
+  flex-direction: column;
+}
+
+.chatName span {
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: var(--color-text-light); /* Lighter text for subtitle */
+}
+
+.chat:hover .chatName span {
+  color: var(--color-background-light); /* White text on hover */
+}

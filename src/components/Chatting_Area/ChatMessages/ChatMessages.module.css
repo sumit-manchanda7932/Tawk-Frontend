@@ -1,0 +1,70 @@
+/* Background similar to WhatsApp */
+.scrollableFeed {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  overflow-y: auto;
+  height: 100%;
+  /* background-image: url('https://www.transparenttextures.com/patterns/clean-textile.png'); WhatsApp-like texture */
+  /* background-color: #9aaab1; Fallback WhatsApp background color */
+  /* background-size: cover; */
+}
+
+.message {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.avatar {
+  margin-right: 8px;
+}
+
+.messageContent {
+  padding: 10px 15px;
+  max-width: 75%;
+  min-width:100px;
+  font-size: 14px;
+  word-wrap: break-word;
+  position: relative;
+  line-height: 1.4;
+}
+
+/* Sender message (user) bubble */
+.senderMessage {
+  align-self: flex-end;
+  background-color: #dcf8c6; /* WhatsApp green sender bubble */
+  border-radius: 7.5px 7.5px 0px 7.5px;
+  color: #303030;
+}
+
+/* Receiver message (other users) bubble */
+.receiverMessage {
+  align-self: flex-start;
+  background-color: #d5d8d18f; /* WhatsApp white receiver bubble */
+  border-radius: 7.5px 7.5px 7.5px 0px;
+  color: #303030;
+}
+
+.errorMessage {
+  color: red;
+}
+
+.timeStamp {
+  font-size: 0.75rem;
+  position: absolute;
+  bottom: -2px;
+  right: 10px;
+  color: #999;
+}
+
+.messageContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Sender-specific container styling */
+.senderMessageContainer {
+  align-items: flex-end;
+}

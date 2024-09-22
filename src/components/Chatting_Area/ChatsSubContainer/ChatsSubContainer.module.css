@@ -1,0 +1,175 @@
+:root {
+  --color-background: #eaeff5; /* Softer background for better contrast */
+  --color-background-light: #ffffff;
+  --color-primary: #0061f2; /* More vivid primary color for better contrast */
+  --color-primary-light: #adcdfd;
+  --color-primary-dark: #003b9e;
+  --color-text-dark: #1d2b3a; /* Darker text for higher contrast */
+  --color-text-light: #657789;
+  --color-text-muted: #99a2b3;
+  --color-shadow-light: rgba(0, 0, 0, 0.1); /* Slightly deeper shadow for better definition */
+  --color-border: #c5ccd6;
+  --color-accent: #ff5722; /* Accent color for important elements */
+}
+
+body {
+  background-color: var(--color-background); /* Full page background */
+  color: var(--color-text-dark);
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+.cover{
+  display: flex;
+  gap:2rem;
+  /* align-items: center; */
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  background-color: rgb(12, 139, 155);
+  color: white; /* White text for contrast */
+  box-shadow: 0 4px 8px var(--color-shadow-light);
+  border-bottom: 2px solid var(--color-primary-dark); /* Stronger separation */
+}
+
+.chatName {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  font-size: 1.5rem; /* Increased size for visual importance */
+  font-weight: bold;
+  color: white; /* White for consistent contrast */
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  font-size: 1rem;
+}
+
+.typing {
+  font-size: 0.85rem;
+  color: var(--color-text-light); /* Subtle contrast */
+}
+
+.chats {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  /* padding: 1rem 1.5rem; */
+  background-color: var(--color-background-light);
+  border-radius: 10px;
+  box-shadow: 0 2px 6px var(--color-shadow-light); /* Subtle depth */
+  overflow-y: auto;
+  /* margin: 1rem; */
+}
+
+.noChatSelected {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  text-align: center;
+  background-color: var(--color-background);
+  color: var(--color-text-muted);
+}
+
+.noChatSelected h2 {
+  font-size: 1.8rem; /* Slightly larger title */
+  font-weight: bold;
+  color: var(--color-text-dark);
+}
+
+.noChatSelected p {
+  font-size: 1rem;
+  color: var(--color-text-light);
+}
+
+.messageInput {
+  display: flex;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  background-color: var(--color-background-light);
+  border-top: 1px solid var(--color-border);
+  box-shadow: 0 -2px 5px var(--color-shadow-light); /* Elevated feel */
+}
+
+.textarea {
+  flex-grow: 1;
+  padding: 0.8rem 1.2rem;
+  border: 1px solid var(--color-border);
+  border-radius: 2rem; /* Softer shape */
+  background-color: var(--color-background);
+  font-size: 1rem;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.textarea:focus {
+  border-color: var(--color-primary-dark);
+  background-color: var(--color-background-light);
+}
+
+.button {
+  margin-left: 1rem;
+  background-color: var(--color-accent); /* Accent for call-to-action */
+  color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 0.8rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s;
+}
+
+.button:hover {
+  background-color: var(--color-primary-dark);
+}
+
+.backBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-dark);
+  font-size: 1.5rem; /* Larger back button */
+  cursor: pointer;
+}
+
+.emojiBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-muted);
+  background-color: var(--color-background-light);
+  border: none;
+  border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+  cursor: pointer;
+}
+
+.emojiBtn:hover {
+  background-color: var(--color-primary-light); /* Light hover effect */
+}
+
+.call {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  color: var(--color-primary);
+}
+
+.call span {
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+
+.call span:hover {
+  color: var(--color-primary-dark); /* Clearer hover effect */
+}
